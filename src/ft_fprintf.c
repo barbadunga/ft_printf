@@ -28,10 +28,9 @@ int		ft_fprintf(int	fd, va_list va, const char *format)
 	if (!(buff = ft_vec_init(ft_strlen(format), sizeof(char))))
 		return (-1);
 	while (format[i])
-	{
 		if (!ft_vec_add(&buff, (void*)format + i++))
 			return (-1);
-	}
 	write(fd, buff->data, buff->total);
+	ft_vec_del(&buff);
 	return (1);
 }

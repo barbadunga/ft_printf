@@ -1,5 +1,4 @@
 .idea
-libft
 CMakeLists.txt
 a.out
 cmake-build-debug
